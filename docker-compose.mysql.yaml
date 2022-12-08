@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql/mysql-server:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=koel_db
+      - MYSQL_USER=koel_app
+      - MYSQL_PASSWORD=koel_pass
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
+    driver: local
