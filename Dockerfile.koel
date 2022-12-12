@@ -1,0 +1,5 @@
+FROM phanan/koel
+
+RUN php artisan koel:init --no-assets -n
+
+CMD [ "php", "artisan", "serve" ]
