@@ -2,7 +2,8 @@ version: '3'
 
 services:
   koel:
-    image: phanan/koel
+    build:
+      dockerfile: DockerFile.koel
     ports:
       - 8080:80
     environment:
