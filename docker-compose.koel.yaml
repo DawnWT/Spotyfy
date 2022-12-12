@@ -15,7 +15,7 @@ services:
       - music:/music
       - covers:/var/www/html/public/img/covers
       - search_index:/var/www/html/storage/search-indexes
-    command: php artisan koel:init --no-assets -n
+    command: php artisan koel:init --no-assets -n && php artisan serve
 
 volumes:
   music:
