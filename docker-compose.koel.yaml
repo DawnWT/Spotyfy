@@ -2,8 +2,7 @@ version: '3'
 
 services:
   koel:
-    build:
-      dockerfile: DockerFile.koel
+    image: phanan/koel
     ports:
       - 8080:80
     environment:
@@ -16,6 +15,7 @@ services:
       - music:/music
       - covers:/var/www/html/public/img/covers
       - search_index:/var/www/html/storage/search-indexes
+    command: php artisan koel:init --no-assets -n
 
 volumes:
   music:
